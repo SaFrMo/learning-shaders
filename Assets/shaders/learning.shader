@@ -1,6 +1,6 @@
 ﻿Shader "Custom/learning" {
 	Properties {
-        _Albedo ("Albedo", Range(0,1)) = 1.0
+        _MainTex ("Texture", 2D) = "white" {}
 	}
 	SubShader {
 		Tags { "RenderType"="Opaque" }
@@ -8,13 +8,13 @@
 		CGPROGRAM
         #pragma surface surf Lambert
         struct Input {
-            float4 color: COLOR;
+            float2 uv_MainTex;
         };
         
-        half _Albedo;
+        sampler2D _MainTex;
         
         void surf(Input IN, inout SurfaceOutput o) {
-            o.Albedo = _Albedo;
+            o.Albedo = tex2D(_MainTex, IN.uv_MainTex);
         }
         ENDCG
 	}
