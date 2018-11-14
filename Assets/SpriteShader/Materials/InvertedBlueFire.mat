@@ -6,13 +6,13 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: learning
-  m_Shader: {fileID: 4800000, guid: 3a3dbf05c51c945a8b4ac6600c1bc46f, type: 3}
-  m_ShaderKeywords: 
+  m_Name: InvertedBlueFire
+  m_Shader: {fileID: 4800000, guid: ceac1943e0d89ff44b5564db28aecbee, type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -34,12 +34,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Distort:
+        m_Texture: {fileID: 2800000, guid: 799ad8ec365f7074e9482d4e182db6db, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _ExtraTex:
+        m_Texture: {fileID: 2800000, guid: 727babd9f1ef0be468453f0751e57c13, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5dd3dd78358d14ae29bd60016fa95af7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 54a56891653aa3047bfd383c54dc8939, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -55,32 +63,41 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Albedo: 1
-    - _Alpha: 1
-    - _Band: 1
-    - _BandInner: 1.3
-    - _BandOuter: 1.83
-    - _BandWidth: 0.208
+    - _Brightness: 10
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
+    - _Distort: -0.363
+    - _Distort2: 3.71
+    - _Distort3: 0
     - _DstBlend: 0
-    - _Extrusion: 0
+    - _EffectOffset: 0.0214
+    - _EffectSize: 0
+    - _GRADIENT: 0
     - _GlossMapScale: 1
-    - _Glossiness: 1
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _GradientScale: 0.08
     - _Metallic: 0
     - _Mode: 0
+    - _Multiplier: -1.95
+    - _ONLY: 0
+    - _ORDER: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.941
+    - _Offset: 0.04
+    - _Offset2: 0.52
+    - _Opacity: 0.63
     - _Parallax: 0.02
-    - _Radius: 0
+    - _Scale: 1.76
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpeedX: 3.65
+    - _SpeedY: -2.06
     - _SrcBlend: 1
     - _UVSec: 0
+    - _Width: 0
+    - _Width2: 0
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.45756555, b: 0.8862745, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
