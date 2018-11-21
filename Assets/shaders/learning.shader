@@ -216,7 +216,7 @@ Shader "Custom/Learning" {
             // lava ball
             /* float noise = snoise((v.vertex * _Time) / 4.0) * 0.05; */
             // smooth ball
-            float noise = snoise((v.vertex + _Time) / 4.0) * 0.05;
+            float noise = snoise((v.vertex + _Time) / 4.0) * 0.1;
             UNITY_INITIALIZE_OUTPUT(Input, o);
             v.vertex.xyz += v.normal * noise;
             o.noise = noise;
