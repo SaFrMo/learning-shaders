@@ -8,6 +8,8 @@
 	SubShader {
 
 		CGPROGRAM
+// Upgrade NOTE: excluded shader from DX11, OpenGL ES 2.0 because it uses unsized arrays
+#pragma exclude_renderers d3d11 gles
 		#pragma surface surf Standard fullforwardshadows vertex:vert
 		#pragma target 3.0
 		#include "noise2d.cginc"
@@ -16,6 +18,9 @@
 		sampler2D _WobbleStrength;
 		half _WobbleSpeed;
 		half _WobbleIntensity;
+        
+        int _PointCount = 1000;
+        float4 _ReversePoints[1000];
 
 		struct Input {
 			float2 uv_MainTex;
@@ -32,8 +37,16 @@
 		}
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
-			// Albedo comes from a texture tinted by color
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
+            
+            // reverse if needed
+            for (int i = 0; i < _PointCount; i++){
+                float2 p = _ReversePoints[i].xy;
+                if (distance(IN.uv_MainTex, p) < 0.1) {
+                    c = fixed4(1.0, 1.0, 1.0, 1.0) - c;
+                    i = _PointCount;
+                }
+            }
 			o.Albedo = c;
 		}
 		ENDCG

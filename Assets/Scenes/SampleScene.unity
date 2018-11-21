@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 595715800}
   - component: {fileID: 595715799}
   - component: {fileID: 595715798}
+  - component: {fileID: 595715802}
   m_Layer: 0
   m_Name: Mona Lisa
   m_TagString: Untagged
@@ -266,6 +267,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &595715802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 595715797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc160fd9d633478ba927a50a733474c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {x: 0.5, y: 0.5}
+  - {x: 0.25, y: 0.25}
+  - {x: 0.75, y: 0.25}
+  - {x: 0.25, y: 0.75}
 --- !u!1 &726225257
 GameObject:
   m_ObjectHideFlags: 0
