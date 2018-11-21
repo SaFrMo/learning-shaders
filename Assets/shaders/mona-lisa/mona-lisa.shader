@@ -19,7 +19,6 @@
 		half _WobbleSpeed;
 		half _WobbleIntensity;
         
-        int _PointCount = 1000;
         float4 _ReversePoints[1000];
 
 		struct Input {
@@ -38,13 +37,15 @@
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			fixed4 c = tex2D (_MainTex, IN.uv_MainTex);
+            bool done = false;
             
             // reverse if needed
-            for (int i = 0; i < _PointCount; i++){
+            // (amazingly inefficient)
+            for (int i = 0; i < 1000; i++){
                 float2 p = _ReversePoints[i].xy;
-                if (distance(IN.uv_MainTex, p) < 0.1) {
+                if (!done && p.x != -1.0 && p.y != -1.0 && distance(IN.uv_MainTex, p) < 0.1) {
                     c = fixed4(1.0, 1.0, 1.0, 1.0) - c;
-                    i = _PointCount;
+                    done = true;
                 }
             }
 			o.Albedo = c;
