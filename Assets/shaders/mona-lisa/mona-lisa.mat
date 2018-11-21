@@ -22,9 +22,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 40a67523c7bb244f1b9a5f2ad6e16927, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WobbleStrength:
+        m_Texture: {fileID: 2800000, guid: c819fd00aa16c4514ba657f528803377, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _WobbleSpeed: 1
+    - _WobbleIntensity: 0.136
+    - _WobbleSpeed: 1.83
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
