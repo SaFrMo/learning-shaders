@@ -2,6 +2,7 @@
 	Properties {
 		_MainTex ("Main Texture", 2D) = "white" {}
 		_WobbleSpeed ("Wobble Speed", Range(-5, 5)) = 1
+		_WobbleIntensity ("Wobble Intensity", Range(0, .5)) = 0.05
 	}
 	SubShader {
 
@@ -12,13 +13,14 @@
 
 		sampler2D _MainTex;
 		half _WobbleSpeed;
+		half _WobbleIntensity;
 
 		struct Input {
 			float2 uv_MainTex;
 		};
 
 		void vert (inout appdata_full v) {
-			float noise = cnoise((v.vertex.xy + _Time * _WobbleSpeed) ) * 0.05;
+			float noise = cnoise((v.vertex.xy + _Time * _WobbleSpeed) ) * _WobbleIntensity;
 			v.vertex.xz += noise;
 		}
 
