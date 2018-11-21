@@ -191,7 +191,7 @@ GameObject:
   - component: {fileID: 595715799}
   - component: {fileID: 595715798}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Mona Lisa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,13 +259,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 595715797}
-  m_LocalRotation: {x: -0.6670213, y: -0.23469697, z: -0.23469692, w: 0.6670213}
+  m_LocalRotation: {x: -0.23469305, y: -0.66702265, z: 0.66702265, w: -0.23469305}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: -38.77}
+  m_LocalEulerAnglesHint: {x: -270, y: 51.230988, z: -90}
 --- !u!1 &726225257
 GameObject:
   m_ObjectHideFlags: 0
