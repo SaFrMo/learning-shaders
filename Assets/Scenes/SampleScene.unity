@@ -279,9 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points:
-  - {x: 0.78824276, y: 0.72815126}
-  - {x: 0.53988713, y: 0.5870669}
-  - {x: 0.29436952, y: 0.78827214}
+  - {x: 0.5, y: 0.5}
 --- !u!1 &726225257
 GameObject:
   m_ObjectHideFlags: 0

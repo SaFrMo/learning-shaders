@@ -29,7 +29,7 @@ Material:
     m_Floats:
     - _Glossiness: 0.5
     - _Metallic: 0
-    - _WobbleIntensity: 0.136
+    - _WobbleIntensity: 0
     - _WobbleSpeed: 1.83
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
