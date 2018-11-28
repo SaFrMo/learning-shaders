@@ -12,8 +12,9 @@
 #pragma exclude_renderers d3d11 gles
 		#pragma surface surf Standard fullforwardshadows vertex:vert
 		#pragma target 3.0
-		#include "noise2d.cginc"
-		#include "rand2d.cginc"
+		#include "../components/noise2d.cginc"
+		#include "../components/rand2d.cginc"
+		#include "../effects/static1.cginc"
 
 		sampler2D _MainTex;
 		sampler2D _WobbleStrength;
@@ -45,7 +46,7 @@
             for (int i = 0; i < 100; i++){
                 float2 p = _ReversePoints[i].xy;
                 if (!done && p.x != -1.0 && p.y != -1.0 && distance(IN.uv_MainTex, p) < 0.1) {
-					float r = rand2d(floor(IN.uv_MainTex.x * 100.0) + floor(IN.uv_MainTex.y * 100.0) + floor(_Time / 0.02));
+					float r = static1(IN.uv_MainTex);
 					c = fixed4(r, r, r, 1.0);
                     done = true;
                 }
