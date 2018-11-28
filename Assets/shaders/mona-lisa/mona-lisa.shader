@@ -20,7 +20,7 @@
 		half _WobbleSpeed;
 		half _WobbleIntensity;
 
-        float4 _ReversePoints[1000];
+        float4 _ReversePoints[100];
 
 		struct Input {
 			float2 uv_MainTex;
@@ -42,10 +42,10 @@
 
             // reverse if needed
             // (amazingly inefficient)
-            for (int i = 0; i < 1000; i++){
+            for (int i = 0; i < 100; i++){
                 float2 p = _ReversePoints[i].xy;
                 if (!done && p.x != -1.0 && p.y != -1.0 && distance(IN.uv_MainTex, p) < 0.1) {
-					float r = rand2d(floor(IN.uv_MainTex.x * 10.0) + floor(_Time / 0.2));
+					float r = rand2d(floor(IN.uv_MainTex.x * 100.0) + floor(IN.uv_MainTex.y * 100.0) + floor(_Time / 0.02));
 					c = fixed4(r, r, r, 1.0);
                     done = true;
                 }
